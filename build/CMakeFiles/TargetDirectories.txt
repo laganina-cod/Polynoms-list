@@ -1,0 +1,6 @@
+D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/ALL_BUILD.dir
+D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/ZERO_CHECK.dir
+D:/Documents/GitHub/Polynoms-list/build/sample/CMakeFiles/STATIC.dir
+D:/Documents/GitHub/Polynoms-list/build/sample/CMakeFiles/Sample_poly.dir
+D:/Documents/GitHub/Polynoms-list/build/gtest/CMakeFiles/gtest.dir
+D:/Documents/GitHub/Polynoms-list/build/base_test/CMakeFiles/test_polynoms.dir

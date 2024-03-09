@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{418F8A92-989D-3B6D-B2D7-B2F9474E76C5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\GitHub\Polynoms-list\include;D:\Documents\GitHub\Polynoms-list\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\GitHub\Polynoms-list\include;D:\Documents\GitHub\Polynoms-list\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\GitHub\Polynoms-list\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/GitHub/Polynoms-list/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/GitHub/Polynoms-list -BD:/Documents/GitHub/Polynoms-list/build --check-stamp-file D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/GitHub/Polynoms-list/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Documents/GitHub/Polynoms-list -BD:/Documents/GitHub/Polynoms-list/build --check-stamp-file D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Documents\GitHub\Polynoms-list\build\ZERO_CHECK.vcxproj">
+      <Project>{CE583398-85F9-3D16-923D-59840F62508C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\GitHub\Polynoms-list\build\sample\STATIC.vcxproj">
+      <Project>{F2BEF0D6-1462-377B-BA29-1476C2D93999}</Project>
+      <Name>STATIC</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\GitHub\Polynoms-list\build\sample\Sample_poly.vcxproj">
+      <Project>{4506198C-E9A1-3BBF-9A7D-8A70AAA88578}</Project>
+      <Name>Sample_poly</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\GitHub\Polynoms-list\build\gtest\gtest.vcxproj">
+      <Project>{C0ADD865-62EB-3BCF-AC24-0CFA8A4BBD36}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\GitHub\Polynoms-list\build\base_test\test_polynoms.vcxproj">
+      <Project>{54DCFA7A-A1C8-35F5-9501-F0136914A441}</Project>
+      <Name>test_polynoms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

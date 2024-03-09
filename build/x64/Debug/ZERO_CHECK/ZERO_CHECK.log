@@ -1,0 +1,32 @@
+﻿  1>Checking Build System
+  CMake is re-running because D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'D:/Documents/GitHub/Polynoms-list/CMakeLists.txt'
+    is newer than 'D:/Documents/GitHub/Polynoms-list/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+    Compatibility with CMake < 3.5 will be removed from a future version of
+    CMake.
+  
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+  
+  
+  -- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.19043.
+  CMake Error at CMakeLists.txt:24 (add_subdirectory):
+    The source directory
+  
+      D:/Documents/GitHub/Polynoms-list/include
+  
+    does not contain a CMakeLists.txt file.
+  
+  
+  -- 
+  -- General configuration for polynoms
+  -- ======================================
+  -- 
+  --    Configuration: Release
+  -- 
+  -- Configuring incomplete, errors occurred!
+  CMake Configure step failed.  Build files cannot be regenerated correctly.  Attempting to stop IDE build.
+  Не удается найти указанную метку пакетного файла - VCEnd
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(237,5): error MSB8066: пользовательская сборка для "D:\Documents\GitHub\Polynoms-list\build\CMakeFiles\641e8ea5cc1e90299538f7a9b0d660af\generate.stamp.rule" завершила работу с кодом 1.

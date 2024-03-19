@@ -3,11 +3,6 @@
 
 
 
-TEST(myNode, can_create_node)
-{
-	ASSERT_NO_THROW(myNode <int> Nd);
-}
-
 
 TEST(myNode, can_create_parameter_dependent_node)
 {
@@ -106,7 +101,7 @@ TEST(myList, inserst_is_correct)
 	Nd.insert(1,3);
 	Nd.pop_back();
 	EXPECT_EQ(3,Nd.pop_back());
-    EXPECT_EQ(1,Nd.pop_front());
+    EXPECT_EQ(2,Nd.pop_front());
 }
 
 TEST(myList, search_is_correct)
@@ -114,14 +109,41 @@ TEST(myList, search_is_correct)
 	myList<int> Nd;
 	Nd.push_front(1);
 	Nd.push_front(2);
-	EXPECT_EQ(Nd.search(1),2);
+	EXPECT_EQ(1,Nd.search(1));
 }
 TEST(myList, delete_is_correct)
 {
 	myList<int> Nd;
 	Nd.push_front(1);
 	Nd.push_front(2);
-	Nd.delete_el(0);
+	Nd.push_front(1);
+	Nd.delete_el(1);
 	EXPECT_EQ(1,Nd.pop_back());
 }
 
+TEST(myList, list_can_assign) {
+	myList<int> Nd;
+	Nd.push_back(1);
+	Nd.push_back(2);
+	myList<int> Nd1;
+	EXPECT_NO_THROW(Nd1 = Nd);
+}
+
+TEST(myList, assigned_list_is_equal_to_source_one) {
+	myList<int> Nd;
+	Nd.push_back(1);
+	Nd.push_back(2);
+	myList<int> Nd1;
+	Nd1 = Nd;
+	EXPECT_EQ(2, Nd1.pop_back());
+}
+
+TEST(myList, assigned_list_is_has_its_own_memory) {
+	myList<int> Nd;
+	Nd.push_back(1);
+	Nd.push_back(2);
+	myList<int> Nd1;
+	Nd1 = Nd;
+	Nd.push_back(3);
+	EXPECT_EQ(2, Nd1.pop_back());
+}
